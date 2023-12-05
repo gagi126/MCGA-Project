@@ -1,0 +1,101 @@
+@inject MCGA.Client.Shared.PageHistoryState PageHistoryState
+
+<EditForm Model="@client" OnValidSubmit="@OnValidSubmit">
+    <FluentValidator TValidator="ClientValidator" />
+
+    <div class="form-group row">
+        <label for="firstName" class="col-sm-2 col-form-label">Nombre:</label>
+        <div class="col-sm-4">
+            <InputText @bind-Value="@client.FirstName" id="firstName" class="form-control"   />
+            <ValidationMessage For="@(() => client.FirstName)" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="lastName" class="col-sm-2 col-form-label">Apellido:</label>
+        <div class="col-sm-4">
+            <InputText @bind-Value="@client.LastName" id="lastName" class="form-control" />
+            <ValidationMessage For="@(() => client.LastName)" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="phone" class="col-sm-2 col-form-label">Teléfono:</label>
+        <div class="col-sm-4">
+            <InputText @bind-Value="@client.Phone" id="phone" class="form-control" oninput="validateInput(this)" />
+            <ValidationMessage For="@(() => client.Phone)" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="address" class="col-sm-2 col-form-label">Dirección:</label>
+        <div class="col-sm-4">
+            <InputText @bind-Value="@client.Address" id="address" class="form-control" />
+            <ValidationMessage For="@(() => client.Address)" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="birthDate" class="col-sm-2 col-form-label">Fecha de Nacimiento:</label>
+        <div class="col-sm-4">
+            <InputDate @bind-Value="@client.BirthDate" id="birthDate" class="form-control" />
+            <ValidationMessage For="@(() => client.BirthDate)" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-6 offset-sm-2">
+            <button disabled="@loading" class="btn btn-primary">
+                @if (loading)
+                {
+                    <span class="spinner-border spinner-border-sm mr-1"></span>
+                }
+                @ButtonText
+            </button>
+
+            @if (PageHistoryState.CanGoBack())
+            {
+                <NavLink href="@PageHistoryState.GetGoBackPage()" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left"></i> Cancelar
+                </NavLink>
+            }
+            else
+            {
+                <NavLink href="/clients" class="btn btn-primary">
+                    <i class="bi bi-arrow-left"></i> Volver
+                </NavLink>
+            }
+        </div>
+    </div>
+    <script>
+        function validateInput(input) {
+            // Reemplaza espacios y caracteres no numéricos
+            input.value = input.value.replace(/[^0-9]/g, '');
+        }
+    </script>
+</EditForm>
+
+
+@code {
+    [Parameter]
+    public MCGA.Shared.Client client { get; set; }
+    [Parameter]
+    public string ButtonText { get; set; } = "Save";
+    [Parameter]
+    public bool loading {get; set;} = false;
+    [Parameter]
+    public EventCallback OnValidSubmit { get; set; }
+
+
+    protected override void OnInitialized()
+    {
+        // Verificar si la fecha actual es inválida
+        if (client.BirthDate == DateTime.MinValue || client.BirthDate == DateTime.MaxValue)
+        {
+            // Establecer la fecha de hoy como valor inicial
+            client.BirthDate = DateTime.Now.Date;
+        }
+
+        base.OnInitialized();
+    }
+}

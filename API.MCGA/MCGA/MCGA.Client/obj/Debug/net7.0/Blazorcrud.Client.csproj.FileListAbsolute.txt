@@ -1,0 +1,6 @@
+D:\Escritorio\dotnet-blazor-crud-master\dotnet-blazor-crud-master\Blazorcrud.Client\obj\Debug\net7.0\Blazorcrud.Client.csproj.AssemblyReference.cache
+D:\Escritorio\dotnet-blazor-crud-master\dotnet-blazor-crud-master\Blazorcrud.Client\obj\Debug\net7.0\Blazorcrud.Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\Escritorio\dotnet-blazor-crud-master\dotnet-blazor-crud-master\Blazorcrud.Client\obj\Debug\net7.0\Blazorcrud.Client.AssemblyInfoInputs.cache
+D:\Escritorio\dotnet-blazor-crud-master\dotnet-blazor-crud-master\Blazorcrud.Client\obj\Debug\net7.0\Blazorcrud.Client.AssemblyInfo.cs
+D:\Escritorio\dotnet-blazor-crud-master\dotnet-blazor-crud-master\Blazorcrud.Client\obj\Debug\net7.0\Blazorcrud.Client.csproj.CoreCompileInputs.cache
+D:\Escritorio\dotnet-blazor-crud-master\dotnet-blazor-crud-master\Blazorcrud.Client\obj\Debug\net7.0\Blazorcrud.Client.MvcApplicationPartsAssemblyInfo.cache

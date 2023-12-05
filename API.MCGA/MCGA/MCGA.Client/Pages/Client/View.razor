@@ -1,0 +1,82 @@
+@page "/clients/viewclient/{Id}"
+@inject IClientService PersonService
+@inject NavigationManager navManager
+@inject MCGA.Client.Shared.PageHistoryState PageHistoryState
+@inject Services.IUserService UserService
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@if (LoggedIn)
+{
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Ver Cliente</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th scope="row">Nombre:</th>
+                        <td>@client.FirstName</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Apellido:</th>
+                        <td>@client.LastName</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fecha de Nacimiento:</th>
+                        <td>@client.BirthDate</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Teléfono:</th>
+                        <td>@client.Phone</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Dirección:</th>
+                        <td>@client.Address</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="text-center">
+                @if (PageHistoryState.CanGoBack())
+                {
+                    <NavLink href="@PageHistoryState.GetGoBackPage()" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left"></i> Volver
+                    </NavLink>
+                }
+                else
+                {
+                    <NavLink href="./clients" class="btn btn-primary">
+                        <i class="bi bi-arrow-left"></i> Volver
+                    </NavLink>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+}
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    MCGA.Shared.Client client = new MCGA.Shared.Client { };
+
+    public bool LoggedIn
+    {
+        get { return UserService.User != null; }
+    }
+
+
+    protected async override Task OnParametersSetAsync()
+    {
+        if (LoggedIn)
+        {
+            client = await PersonService.GetClientDetails(int.Parse(Id));
+        }
+        else
+        {
+            UriHelper.NavigateTo("/user/login");
+        }
+        
+    }
+
+}

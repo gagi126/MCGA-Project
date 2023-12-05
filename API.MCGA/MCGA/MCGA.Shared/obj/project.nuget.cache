@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "V1JfqV6djphrpGWDypAoxfNoGdMgbaIJfJXMryJuvZPi1zevqZgYaW5DGfIn5Ya5g2ruPDvy/33qb2EQblycMA==",
+  "success": true,
+  "projectFilePath": "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Thermaltake\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

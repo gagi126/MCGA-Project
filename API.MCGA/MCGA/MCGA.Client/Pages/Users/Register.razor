@@ -1,0 +1,78 @@
+@page "/user/register"
+@inject Services.IUserService UserService
+@inject IAlertService AlertService
+@inject ILocalStorageService LocalStorageService
+@inject NavigationManager navManager
+@inject MCGA.Client.Shared.PageHistoryState PageHistoryState
+
+<div class="col-md-6 offset-md-3 mt-5">
+    <div class="card shadow-lg">
+        <h4 class="card-header bg-success text-white text-center">Registro</h4>
+        <div class="card-body">
+            <EditForm Model="@registerModel" OnValidSubmit="OnValidSubmit">
+                <DataAnnotationsValidator />
+                <div class="form-group">
+                    <label for="username">Nombre</label>
+                    <InputText @bind-Value="registerModel.Name" id="username" class="form-control" />
+                    <ValidationMessage For="@(() => registerModel.Name)" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <InputText @bind-Value="registerModel.Email" id="email" class="form-control" />
+                    <ValidationMessage For="@(() => registerModel.Email)" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <InputText @bind-Value="registerModel.Password" type="password" id="password" class="form-control" />
+                    <ValidationMessage For="@(() => registerModel.Password)" />
+                </div>
+                <button disabled="@loading" class="btn btn-success btn-block" id="register_button">
+                    @if (loading)
+                    {
+                        <span class="spinner-border spinner-border-sm mr-1"></span>
+                    }
+                    Registrarse
+                </button>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    private MCGA.Shared.DTOs.UserRegistrationRequestDTO registerModel = new MCGA.Shared.DTOs.UserRegistrationRequestDTO();
+    private bool loading;
+
+    private async void OnValidSubmit()
+    {
+        // reset alerts on submit
+        AlertService.Clear();
+
+        loading = true;
+        try
+        {
+            var registrationSuccessful = await UserService.Register(registerModel);
+
+            if (registrationSuccessful)
+            {
+                // Mostrar un mensaje indicando que se envió un correo para confirmar el registro
+                AlertService.Success("Se ha enviado un correo electrónico para confirmar tu registro. Por favor, verifica tu bandeja de entrada.");
+                // No redireccionar después de un registro exitoso
+            }
+            else
+            {
+                AlertService.Error("Error en el registro. Verifica tus datos e intenta nuevamente.");
+            }
+        }
+        catch (Exception ex)
+        {
+            AlertService.Error(ex.Message);
+        }
+        finally
+        {
+            loading = false;
+            StateHasChanged();
+        }
+    }
+
+}

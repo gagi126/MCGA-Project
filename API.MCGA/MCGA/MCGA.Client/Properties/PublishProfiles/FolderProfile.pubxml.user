@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\webclient</_PublishTargetUrl>
+    <History>True|2023-12-04T04:43:04.0012690Z;True|2023-12-04T01:30:14.9754063-03:00;False|2023-12-04T01:28:50.5756996-03:00;False|2023-12-04T01:28:25.1805791-03:00;False|2023-12-04T01:26:08.8013547-03:00;False|2023-12-04T01:20:28.9686164-03:00;False|2023-12-04T01:19:48.5877933-03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

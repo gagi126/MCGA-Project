@@ -1,0 +1,58 @@
+@page "/clients/createclient"
+@attribute [Authorize]
+@inject IAlertService AlertService
+@inject IClientService PersonService
+@inject NavigationManager navManager
+@inject MCGA.Client.Shared.PageHistoryState PageHistoryState
+@inject Services.IUserService UserService
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+<h1>Crear Cliente</h1>
+<br/>
+
+
+<Form ButtonText="Crear cliente" client="@client" loading="@loading"
+            OnValidSubmit="@CreateClient" />
+
+@code {
+    bool loading = false;
+
+    MCGA.Shared.Client client = new MCGA.Shared.Client { };
+
+    public bool LoggedIn
+    {
+        get { return UserService.User != null; }
+    }
+
+    protected async override Task OnParametersSetAsync()
+    {
+        if (!LoggedIn)
+        {
+            UriHelper.NavigateTo("/user/login");
+        }
+    }
+
+
+
+
+    async Task CreateClient()
+    {
+        loading = true;
+        try
+        {
+            await PersonService.CreateClient(client);
+            AlertService.Success("Cliente creado con exito", keepAfterRouteChange: true);
+            if (PageHistoryState.CanGoBack()){
+                navManager.NavigateTo(PageHistoryState.GetGoBackPage());
+            }
+            else{
+                navManager.NavigateTo("/clients");
+            } 
+        }
+        catch (Exception ex)
+        {
+            AlertService.Error(ex.Message);
+            loading = false;
+            StateHasChanged();
+        }
+    }
+}

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\new api 6.0</_PublishTargetUrl>
+    <History>True|2023-12-04T03:57:51.7123921Z;True|2023-11-17T01:13:12.6237592-03:00;True|2023-11-17T00:11:47.3813088-03:00;True|2023-11-16T23:56:39.3248806-03:00;True|2023-11-16T22:27:57.6067610-03:00;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="APIMCGAContext">
+      <Value>Data Source=./api_mcga.db</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="JwtConfig:Secret">
+      <Value>wDsI0jI307wDsI0jI307</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="SMTPSettings:Password">
+      <Value>gvgsnaalzvusonzu</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="SMTPSettings:UserName">
+      <Value>sistema.gestion.albornoz%40gmail.com</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

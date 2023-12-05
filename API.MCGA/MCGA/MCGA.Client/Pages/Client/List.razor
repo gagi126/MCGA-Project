@@ -1,0 +1,121 @@
+@page "/clients"
+@using MCGA.Shared;
+@inject Services.IClientService ClientService
+@inject Services.IUserService UserService
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@inject MCGA.Client.Shared.PageHistoryState PageHistoryState
+@if(LoggedIn)
+        { 
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Clientes</h1>
+
+        <div class="row mb-3">
+            <div class="col-md-7">
+                <NavLink href="./clients/createclient" class="btn btn-success">Crear Cliente</NavLink>
+            </div>
+        </div>
+
+        @if (clients == null)
+        {
+            <p class="text-center"><em>Cargando...</em></p>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Nombre</th>
+                            <th style="width: 50%;">Apellido</th>
+                            <th style="width: 25%;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var client in clients)
+                        {
+                            <tr>
+                                <td>@client.FirstName</td>
+                                <td>@client.LastName</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <NavLink href="@($"./clients/viewclient/{client.Id}")" class="oi oi-eye text-primary mr-3 nounderline" title="Ver detalles"></NavLink>
+                                        <NavLink href="@($"./clients/updateclient/{client.Id}")" class="oi oi-pencil text-warning mr-3 nounderline" title="Editar"></NavLink>
+                                        @{
+                                            bool isDeleting = isLoading && currentDeletingId == client.Id;
+                                        }
+                                        @if (!isDeleting)
+                                        {
+                                            <NavLink @onclick="@(() => DeleteClient(client))" class="oi oi-trash text-danger nounderline" title="Eliminar"></NavLink>
+                                        }
+                                        @if (isDeleting)
+                                        {
+                                            <span class="spinner-border spinner-border-sm"></span>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+
+}
+
+@code {
+    protected IEnumerable<Client> clients;
+
+    private bool isLoading = false;
+    int currentDeletingId = 0;
+
+    public bool LoggedIn
+    {
+        get {return UserService.User != null;}
+    }
+
+    protected override void OnInitialized()
+    {
+        PageHistoryState.AddPageToHistory(UriHelper.Uri);
+        base.OnInitialized();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if(LoggedIn)
+        {
+            clients = await ClientService.GetClients();
+            PageHistoryState.AddPageToHistory(UriHelper.Uri);
+        }
+        else
+        {
+            UriHelper.NavigateTo("/user/login");
+        }
+    }
+
+
+    private async Task DeleteClient(MCGA.Shared.Client client)
+    {
+        try
+        {
+            isLoading = true;
+            currentDeletingId = client.Id;
+
+            // Realizar la lógica de eliminación del cliente aquí
+            await ClientService.DeleteClient(client.Id);
+
+            // Actualizar la lista de clientes después de la eliminación
+            clients = await ClientService.GetClients();
+        }
+        finally
+        {
+            // Ocultar el spinner, ya sea que la operación haya tenido éxito o haya fallado
+            isLoading = false;
+            currentDeletingId = 0;
+
+            // Asegurar que se repinte la interfaz de usuario después de realizar cambios en el estado
+            StateHasChanged();
+        }
+    }
+
+}

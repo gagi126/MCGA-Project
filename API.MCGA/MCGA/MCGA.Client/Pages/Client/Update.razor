@@ -1,0 +1,65 @@
+@page "/clients/updateclient/{id}"
+@attribute [Authorize]
+@inject IAlertService AlertService
+@inject IClientService PersonService
+@inject Services.IUserService UserService
+@inject NavigationManager navManager
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@inject MCGA.Client.Shared.PageHistoryState PageHistoryState
+@if (LoggedIn)
+{
+    
+
+<h1>Editar Cliente</h1>
+<br/>
+
+<Form ButtonText="Actualizar cliente" client="@client" loading="@loading"
+      OnValidSubmit="@UpdateClient" />
+}
+@code {
+    bool loading = false;
+
+    [Parameter]
+    public string Id { get; set; }
+
+    MCGA.Shared.Client client = new MCGA.Shared.Client { };
+
+    public bool LoggedIn
+    {
+        get { return UserService.User != null; }
+    }
+
+    protected async override Task OnParametersSetAsync()
+    {
+        if (LoggedIn)
+        {
+            client = await PersonService.GetClientDetails(int.Parse(Id));
+        }
+        else
+        {
+            UriHelper.NavigateTo("/user/login");
+        }
+    }
+
+    async Task UpdateClient()
+    {
+        loading = true;
+        try
+        {
+            await PersonService.UpdateClient(client);
+            AlertService.Success("Cliente actualizado con exito", keepAfterRouteChange: true);
+            if (PageHistoryState.CanGoBack()){
+                navManager.NavigateTo(PageHistoryState.GetGoBackPage());
+            }
+            else{
+                navManager.NavigateTo("/clients/");
+            } 
+        }
+        catch (Exception ex)
+        {
+            AlertService.Error(ex.Message);
+            loading = false;
+            StateHasChanged();
+        }
+    }
+}
