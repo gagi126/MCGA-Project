@@ -47,4 +47,4 @@ Ambos proyectos están alojados en Azure para garantizar su accesibilidad.
 
 Frontend Hosting: Azure. [Enlace al FrontEnd](https://mcga-project.azurewebsites.net/)
 
-Backend Hosting: Azure. [Enlace al BackEnd](https://mcga-api.azurewebsites.net/)
+Backend Hosting: Azure. [Enlace al BackEnd](https://mcga-api.azurewebsites.net/swagger)
