@@ -1,0 +1,1 @@
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Client\obj\Release\net7.0\browser-wasm\PubTmp\Out\web.config

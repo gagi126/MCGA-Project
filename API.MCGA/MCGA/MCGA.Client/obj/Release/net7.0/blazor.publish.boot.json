@@ -9,8 +9,8 @@
     "assembly": {
       "Blazored.Toast.dll": "sha256-6wGoA8FmxkQCTFIXEM+U+Y2kJJnSTJXRYwuByAUPWGU=",
       "FluentValidation.dll": "sha256-AWdFkmoHUFhLmUvvrvy+I5C1URXsXIhN4NdHfhU6ydY=",
-      "MCGA.Client.dll": "sha256-hcHQPcM0gfIVLUNdX74NTBUWZlutluAeV3L0am7TqQQ=",
-      "MCGA.Shared.dll": "sha256-HzH6p45zVTPfzdCKwOokFSyw0Mo7vwnna0hisSU7ERM=",
+      "MCGA.Client.dll": "sha256-WsZQB3G4vABNM4uyjWL9P7jF5xMCpbqIrIOFo+7FOwk=",
+      "MCGA.Shared.dll": "sha256-akHYldkeV40NBBEaq8CFa2nw54p4oGy0lVtyAX5aq2I=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-o4vQlZt+Rr3aK80ecLYylMkYKFvLIfZOm73Bn72ZNZk=",
       "Microsoft.AspNetCore.Blazor.HttpClient.dll": "sha256-1xfOnnlZZg19s2R3vH\/UX9m3dprauIFLdeaYzgmiwc0=",
       "Microsoft.AspNetCore.Components.dll": "sha256-NBZrwqMAgaEoWZnaIyu0lJ31awVGAA0m9LR4pQq0eXM=",
