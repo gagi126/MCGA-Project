@@ -34,3 +34,15 @@ G:\API\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\MCGA.Shared.dll
 G:\API\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\refint\MCGA.Shared.dll
 G:\API\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\MCGA.Shared.pdb
 G:\API\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\ref\MCGA.Shared.dll
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\bin\Debug\net6.0\MCGA.Shared.deps.json
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\bin\Debug\net6.0\MCGA.Shared.dll
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\bin\Debug\net6.0\MCGA.Shared.pdb
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\MCGA.Shared.csproj.AssemblyReference.cache
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\MCGA.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\MCGA.Shared.AssemblyInfoInputs.cache
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\MCGA.Shared.AssemblyInfo.cs
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\MCGA.Shared.csproj.CoreCompileInputs.cache
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\MCGA.Shared.dll
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\refint\MCGA.Shared.dll
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\MCGA.Shared.pdb
+D:\Documentos\GitHub\MCGA-Project\API.MCGA\MCGA\MCGA.Shared\obj\Debug\net6.0\ref\MCGA.Shared.dll

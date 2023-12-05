@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VzPa3MG2MFmln6lsvNSluz721fuimxO68CvyMMNb0kbc2MqjPlMkR649woYMwD8Y5GQ7iTLcRyHbH2gEE8VOrw==",
+  "dgSpecHash": "FR+NNzZCSAp0rZGueVCIv8mr+5hf9EMKDoB0l5MxD7lQ6uFaoffK9hSUAaMzXllXiDGL8s9hQq7SlIIUv7oYqg==",
   "success": true,
-  "projectFilePath": "G:\\API\\API.MCGA\\MCGA\\MCGA.Client\\MCGA.Client.csproj",
+  "projectFilePath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Client\\MCGA.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thermaltake\\.nuget\\packages\\blazored.toast\\4.1.0\\blazored.toast.4.1.0.nupkg.sha512",
     "C:\\Users\\Thermaltake\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",

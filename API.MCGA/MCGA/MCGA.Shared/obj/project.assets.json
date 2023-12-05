@@ -55,11 +55,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj",
+      "projectUniqueName": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj",
       "projectName": "MCGA.Shared",
-      "projectPath": "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj",
+      "projectPath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj",
       "packagesPath": "C:\\Users\\Thermaltake\\.nuget\\packages\\",
-      "outputPath": "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\obj\\",
+      "outputPath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

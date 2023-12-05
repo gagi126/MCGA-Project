@@ -1,22 +1,62 @@
 ﻿@page "/"
+<style>
+    .feature-list,
+    .tech-list {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
 
-<div class="jumbotron">
+        .feature-list h3,
+        .tech-list h3 {
+            color: #007bff;
+        }
+
+        .feature-list ul,
+        .tech-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .feature-list li,
+        .tech-list li {
+            margin-bottom: 10px;
+        }
+
+            .feature-list li b {
+                font-weight: bold;
+            }
+
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+    }
+</style>
+
+<div class="container text-center" style="margin-top: 50px;">
     <h1 class="display-4">Proyecto CRUD para MCGA</h1>
     <p class="lead">¡Bienvenido al Proyecto Final de Desarrollo para MCGA! </p>
     <hr class="my-4">
-    <ul style="line-height:1.8;">
-        <li><b>Entrada de Datos</b> - Facilita la entrada de datos, validando tanto las entidades.</li>
-        <li><b>Tablas de Datos</b> - Tablas de datos </li>
-        <li><b>Autenticación</b> - Autenticación de usuario mediante JWT con restricciones de acceso a nivel de página y servicios.</li>
-        <li><b>API</b> - Una API REST completa con documentación Swagger.</li>
-    </ul>
 
-    <div class="mt-5">
-        <p class="lead">Tecnologías Utilizadas:</p>
-        <ul>
-            <li>Frontend: Blazor WebAssembly Net Core 7.0</li>
-            <li>Backend: ASP Net Core 7.0 - SQLite</li>
-            <li>Cloud Server: Azure</li>
-        </ul>
+    <div class="container">
+        <div class="feature-list">
+            <h3>Características:</h3>
+            <ul>
+                <li><b>Entrada de Datos</b> - Facilita la entrada de datos, validando todas las entidades.</li>
+                <li><b>Tablas de Datos</b> - Tablas de datos </li>
+                <li><b>Autenticación</b> - Autenticación de usuario mediante JWT con restricciones de acceso a nivel de página y servicios.</li>
+                <li><b>API</b> - Una API REST completa con documentación Swagger.</li>
+            </ul>
+        </div>
+
+        <div class="tech-list">
+            <h3>Tecnologías Utilizadas:</h3>
+            <ul>
+                <li>Frontend: Blazor WebAssembly Net Core 7.0</li>
+                <li>Backend: ASP Net Core 7.0 - SQLite</li>
+                <li>Cloud Server: Azure</li>
+            </ul>
+        </div>
     </div>
 </div>

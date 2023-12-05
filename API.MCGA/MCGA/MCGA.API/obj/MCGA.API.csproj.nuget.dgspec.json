@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\API\\API.MCGA\\MCGA\\MCGA.API\\MCGA.API.csproj": {}
+    "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.API\\MCGA.API.csproj": {}
   },
   "projects": {
-    "G:\\API\\API.MCGA\\MCGA\\MCGA.API\\MCGA.API.csproj": {
+    "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.API\\MCGA.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\API\\API.MCGA\\MCGA\\MCGA.API\\MCGA.API.csproj",
+        "projectUniqueName": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.API\\MCGA.API.csproj",
         "projectName": "MCGA.API",
-        "projectPath": "G:\\API\\API.MCGA\\MCGA\\MCGA.API\\MCGA.API.csproj",
+        "projectPath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.API\\MCGA.API.csproj",
         "packagesPath": "C:\\Users\\Thermaltake\\.nuget\\packages\\",
-        "outputPath": "G:\\API\\API.MCGA\\MCGA\\MCGA.API\\obj\\",
+        "outputPath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -35,11 +35,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "G:\\API\\API.MCGA\\MCGA\\MCGA.Data\\MCGA.Data.csproj": {
-                "projectPath": "G:\\API\\API.MCGA\\MCGA\\MCGA.Data\\MCGA.Data.csproj"
+              "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Data\\MCGA.Data.csproj": {
+                "projectPath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Data\\MCGA.Data.csproj"
               },
-              "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj": {
-                "projectPath": "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj"
+              "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj": {
+                "projectPath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj"
               }
             }
           }
@@ -122,14 +122,14 @@
         }
       }
     },
-    "G:\\API\\API.MCGA\\MCGA\\MCGA.Data\\MCGA.Data.csproj": {
+    "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Data\\MCGA.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\API\\API.MCGA\\MCGA\\MCGA.Data\\MCGA.Data.csproj",
+        "projectUniqueName": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Data\\MCGA.Data.csproj",
         "projectName": "MCGA.Data",
-        "projectPath": "G:\\API\\API.MCGA\\MCGA\\MCGA.Data\\MCGA.Data.csproj",
+        "projectPath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Data\\MCGA.Data.csproj",
         "packagesPath": "C:\\Users\\Thermaltake\\.nuget\\packages\\",
-        "outputPath": "G:\\API\\API.MCGA\\MCGA\\MCGA.Data\\obj\\",
+        "outputPath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -153,8 +153,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj": {
-                "projectPath": "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj"
+              "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj": {
+                "projectPath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj"
               }
             }
           }
@@ -214,14 +214,14 @@
         }
       }
     },
-    "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj": {
+    "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj",
+        "projectUniqueName": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj",
         "projectName": "MCGA.Shared",
-        "projectPath": "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj",
+        "projectPath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Shared\\MCGA.Shared.csproj",
         "packagesPath": "C:\\Users\\Thermaltake\\.nuget\\packages\\",
-        "outputPath": "G:\\API\\API.MCGA\\MCGA\\MCGA.Shared\\obj\\",
+        "outputPath": "D:\\Documentos\\GitHub\\MCGA-Project\\API.MCGA\\MCGA\\MCGA.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
