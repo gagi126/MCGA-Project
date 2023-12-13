@@ -63,7 +63,6 @@ try
                               .AllowAnyMethod());
     });
 
-    // En Configure en tu API
 
     builder.Services.AddDbContext<APIMCGAContext>(options =>
     {
